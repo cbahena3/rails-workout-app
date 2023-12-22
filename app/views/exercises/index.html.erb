@@ -1,0 +1,25 @@
+<header>
+  <div class="nav">
+    <p><a href = "http://localhost:3000/muscles">Home</a> |
+      <a href = "/app/views/exercises/index.html.erb">All Exercises</a> |
+      <a href ="">Arms Exercise</a> |
+      <a href ="">Shoulders Exercise</a> |
+      <a href ="">Legs Exercise</a> |
+      <a href ="">Chest Exercise</a> |
+      <a href ="">Back Exercise</a>
+    </p>
+  </div>
+</header>
+
+<h1>Exercise List</h1>
+
+<ul>
+  <% @exercises.each do |exercise| %>
+    <h2><%=exercise.name %></h2>
+    <p>ID: <%=exercise.id%></p> 
+    <img src=<%= exercise.image%> />
+    <p>Description: <%=exercise.description%></p> 
+    <p>Sets: <%=exercise.sets%></p> 
+    <p>Reps: <%=exercise.reps%></p>
+  <% end %>
+</ul>

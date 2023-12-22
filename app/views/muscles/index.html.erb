@@ -1,0 +1,23 @@
+<header>
+  <div class="nav">
+    <p><a href = "http://localhost:3000/muscles">Home</a> |
+      <a href = "/app/views/exercises/index.html.erb">All Exercises</a> |
+      <a href ="">Arms Exercise</a> |
+      <a href ="">Shoulders Exercise</a> |
+      <a href ="">Legs Exercise</a> |
+      <a href ="">Chest Exercise</a> |
+      <a href ="">Back Exercise</a>
+    </p>
+  </div>
+</header>
+
+
+<h1>Muscle Group List</h1>
+<ul>
+  <% @muscles.each do |muscle| %>
+    <h2><%= muscle.name %></h2>
+    <img src=<%= muscle.image%> />
+    <br> <button> <a href = "Will tie to each category(seperate pages)"> Leg Exercises </a> </button>
+  <% end %>
+</ul>
+

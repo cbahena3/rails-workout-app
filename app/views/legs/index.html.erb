@@ -14,12 +14,14 @@
 <h1>Exercise List</h1>
 
 <ul>
-  <% @exercises.each do |exercise| %>
-    <h2><%=exercise.name %></h2>
-    <img src=<%= exercise.image%> />
-    <p>Description: <%=exercise.description%></p> 
-    <p>Sets: <%=exercise.sets%></p> 
-    <p>Reps: <%=exercise.reps%></p>
-    <p>Muscle Group: <%=exercise.muscle.name%></p>
+  <% @legs.each do |leg| %>
+    <% if leg.muscle.id == 5 %>
+      <h2><%=leg.name %></h2>
+      <img src=<%= leg.image%> />
+      <p>Description: <%=leg.description%></p> 
+      <p>Sets: <%=leg.sets%></p> 
+      <p>Reps: <%=leg.reps%></p>
+      <p>Muscle Group: <%=leg.muscle.name%></p>
+   <% end %>
   <% end %>
 </ul>

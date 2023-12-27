@@ -1,7 +1,7 @@
 <header>
   <div class="nav">
     <p><a href = "http://localhost:3000/muscles">Home</a> |
-      <a href = "/app/views/exercises/index.html.erb">All Exercises</a> |
+      <a href = "/exercises">All Exercises</a> |
       <a href ="">Arms Exercise</a> |
       <a href ="">Shoulders Exercise</a> |
       <a href ="">Legs Exercise</a> |
@@ -17,7 +17,17 @@
   <% @muscles.each do |muscle| %>
     <h2><%= muscle.name %></h2>
     <img src=<%= muscle.image%> />
-    <br> <button> <a href = "Will tie to each category(seperate pages)"> Leg Exercises </a> </button>
+    <%if muscle.name == "Legs"%>
+        <br> <button> <a href = "http://localhost:3000/legs"> Leg Exercises </a> </button>
+    <%elsif muscle.name == "Arms" %>
+        <br> <button> <a href = "nothing yet"> Arm Exercises </a> </button>
+    <%elsif muscle.name == "Back" %>
+        <br> <button> <a href = "nothing yet"> Back Exercises </a> </button>
+    <%elsif muscle.name == "Chest" %>
+        <br> <button> <a href = "nothing yet"> Chest Exercises </a> </button>
+    <%elsif muscle.name == "Shoulders" %>
+        <br> <button> <a href = "nothing yet"> Shoulder Exercises </a> </button>
+    <%end%>
   <% end %>
 </ul>
 

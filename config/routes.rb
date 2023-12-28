@@ -10,4 +10,15 @@ Rails.application.routes.draw do
   get "/legs" => "legs#index"
   get "/legs/:id" => "legs#show"
 
+  get "/arms" => "arms#index"
+  get "/arms/:id" => "arms#show"
+
+  get "/chest" => "chest#index"
+  get "/chest/:id" => "chest#show"
+
+  get "/back" => "back#index"
+  get "/back/:id" => "back#show"
+
+  get "/shoulders" => "shoulders#index"
+  get "/shoulders/:id" => "shoulders#show"
 end

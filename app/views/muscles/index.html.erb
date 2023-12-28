@@ -2,11 +2,11 @@
   <div class="nav">
     <p><a href = "http://localhost:3000/muscles">Home</a> |
       <a href = "/exercises">All Exercises</a> |
-      <a href ="">Arms Exercise</a> |
-      <a href ="">Shoulders Exercise</a> |
-      <a href ="">Legs Exercise</a> |
-      <a href ="">Chest Exercise</a> |
-      <a href ="">Back Exercise</a>
+      <a href ="/arms">Arms Exercise</a> |
+      <a href ="/shoulders">Shoulders Exercise</a> |
+      <a href ="/legs">Legs Exercise</a> |
+      <a href ="/chest">Chest Exercise</a> |
+      <a href ="/back">Back Exercise</a>
     </p>
   </div>
 </header>
@@ -18,15 +18,15 @@
     <h2><%= muscle.name %></h2>
     <img src=<%= muscle.image%> />
     <%if muscle.name == "Legs"%>
-        <br> <button> <a href = "http://localhost:3000/legs"> Leg Exercises </a> </button>
+        <br> <button> <a href = "/legs"> Leg Exercises </a> </button>
     <%elsif muscle.name == "Arms" %>
-        <br> <button> <a href = "nothing yet"> Arm Exercises </a> </button>
+        <br> <button> <a href = "/arms"> Arm Exercises </a> </button>
     <%elsif muscle.name == "Back" %>
-        <br> <button> <a href = "nothing yet"> Back Exercises </a> </button>
+        <br> <button> <a href = "/back"> Back Exercises </a> </button>
     <%elsif muscle.name == "Chest" %>
-        <br> <button> <a href = "nothing yet"> Chest Exercises </a> </button>
+        <br> <button> <a href = "/chest"> Chest Exercises </a> </button>
     <%elsif muscle.name == "Shoulders" %>
-        <br> <button> <a href = "nothing yet"> Shoulder Exercises </a> </button>
+        <br> <button> <a href = "/shoulders"> Shoulder Exercises </a> </button>
     <%end%>
   <% end %>
 </ul>

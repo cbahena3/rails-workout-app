@@ -11,17 +11,17 @@
   </div>
 </header>
 
-<h1>Leg Exercises</h1>
+<h1>Back Exercises</h1>
 
 <ul>
-  <% @legs.each do |leg| %>
-    <% if leg.muscle.id == 5 %>
-      <h2><%=leg.name %></h2>
-      <img src=<%= leg.image%> />
-      <p>Description: <%=leg.description%></p> 
-      <p>Sets: <%=leg.sets%></p> 
-      <p>Reps: <%=leg.reps%></p>
-      <p>Muscle Group: <%=leg.muscle.name%></p>
+  <% @back.each do |index| %>
+    <% if index.muscle.id == 2 %>
+      <h2><%=index.name %></h2>
+      <img src=<%= index.image%> />
+      <p>Description: <%=index.description%></p> 
+      <p>Sets: <%=index.sets%></p> 
+      <p>Reps: <%=index.reps%></p>
+      <p>Muscle Group: <%=index.muscle.name%></p>
    <% end %>
   <% end %>
 </ul>

@@ -5,5 +5,5 @@ class Exercise < ApplicationRecord
   validates :description, presence: true
   validates :sets, presence: true
   validates :reps, presence: true
-  validates :muscle_id, presence: true
+  validates :muscle_id, presence: true, numericality: { only_integer: true }
 end
